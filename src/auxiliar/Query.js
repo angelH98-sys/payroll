@@ -8,4 +8,8 @@ export function GetEmployeeByCode(code){
     return db.collection('Employees').where('code', '==', code).get();
 }
 
+export function GetEmployees(){
+    return db.collection('Employees').orderBy('realSalary', 'desc').get();
+}
+
 export default CreateEmployee;
